@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inicio - CRUD</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+    <body>
+        <header class="bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center text-white">Bienvenido a ITicket</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center my-5">Menú principal</h1>
+                </div>
+                <div class="col-12 col-md-12 col-lg-3 mb-4 mx-auto">
+                    <div class="card border">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Ver conciertos</h5>
+                            <a th:href="@{/listaConciertos}" class="btn btn-success mt-3"><i class="fas fa-eye"></i> Ver</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4 mx-auto">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Crear nuevo concierto</h5>
+                            <a th:href="@{/guardarConcierto}" class="btn btn-primary"><i class="fas fa-plus"></i>Crear</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="text-white">Desarrollado por Grupo 6 - &copy; 2023</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
