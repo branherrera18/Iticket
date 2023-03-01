@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+    <head>
+        <title>Agregar Concierto</title>
+        <meta charset="UTF-8"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div class="container"></div>
+        <div class="card-header bg-black text-white"></div>
+        <div class="card-body">
+
+            <!-- Esto es un formularios -->   
+            <div class="container">
+                <form th:object = "${concierto}"
+                      th:action = "@{/save}"
+                      method="POST">
+
+                    <input type="hidden" th:field="*{id}">
+                    <div class="form-group mb-3 row mt-5">
+                        <label class="col-md-2 col-form-label" for="nombre_artista">Nombre</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control form-control-sm col-md-6" th:field="*{nombre_artista}">
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3 row">
+                        <label class="form-control-sm col-md-2 col-form-label" for="costo">Costo</label>
+                        <div class="col-sm-10">
+                            <input type="number" th:field="*{costo}" class="form-control form-control-sm col-md-6">
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3 row">
+                        <label class="form-control-sm col-md-2 col-form-label" for="fecha">Fecha</label>
+                        <div class="col-sm-10">
+                            <input type="date" th:field="*{fecha}" class="form-control form-control-sm col-md-6">
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3 row">
+                        <label class="form-control-sm col-md-2 col-form-label" for="capacidad">Capacdidad</label>
+                        <div class="col-sm-10">
+                            <input type="tel" th:field="*{capacidad}" class="form-control form-control-sm col-md-6">
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3 row">
+                        <label class="form-control-sm col-md-2 col-form-label" for="lugar">Lugar</label>
+                        <div class="col-sm-10">
+                            <input type="text" th:field="*{lugar}" class="form-control form-control-sm col-md-6">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" value="Guardar">Submit</button>
+                </form>
+            </div>
+    </body>
+</html>
